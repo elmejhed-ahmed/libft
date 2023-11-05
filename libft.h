@@ -6,7 +6,7 @@
 /*   By: ael-mejh <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/30 14:38:05 by ael-mejh          #+#    #+#             */
-/*   Updated: 2023/11/04 19:08:54 by ael-mejh         ###   ########.fr       */
+/*   Updated: 2023/11/05 14:33:09 by ael-mejh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,4 +36,7 @@ int	ft_strncmp(const char *s1, const char *s2,size_t n);
 int ft_atoi(const char *str);
 void *ft_calloc(size_t count, size_t size);
 char *ft_strdup(const char *s1);
+void *ft_memchr(const void *s, int c, size_t n);
+int ft_memcmp(const void *s1, const void *s2, size_t n);
+char *ft_strnstr(const char *haystack, const char *needle, size_t len);
 #endif
