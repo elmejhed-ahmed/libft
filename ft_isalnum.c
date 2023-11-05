@@ -9,12 +9,12 @@
 /*   Updated: 2023/11/01 14:23:58 by ael-mejh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
 #include "libft.h"
 
-int ft_isalnum(int c)
+int	ft_isalnum(int c)
 {
-	if(ft_isdigit(c)|| ft_isalpha(c))
-		return 1;
-	return 0;
+	if (ft_isdigit(c) || ft_isalpha(c))
+		return (1);
+	return (0);
 }
-
