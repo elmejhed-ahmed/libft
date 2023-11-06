@@ -14,15 +14,16 @@
 
 char	*ft_strrchr(const char *str, int c)
 {
-	size_t	lens;
+	int	lens;
 
 	lens = ft_strlen(str);
-	while (lens--)
+	while (lens >= 0)
 	{
 		if (str[lens] == (char)c)
 		{
 			return ((char *)&str[lens]);
 		}
+		lens--;
 	}
-	return (0);
+	return (NULL);
 }

@@ -45,4 +45,12 @@ int main()
 		printf("%c",p[i]);
 	return 0;
 }
-*/
+*//*
+int main ()
+{
+	char src2[] = "Hello, World!";
+	char dest2[20] = "";
+	ft_memmove(dest2 + 2, src2, 7);
+	printf("Expected:  HeHello, World!\n");
+	printf("Actual: %s\n", dest2);
+}*/
