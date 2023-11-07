@@ -6,7 +6,7 @@
 /*   By: ael-mejh <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/30 14:38:05 by ael-mejh          #+#    #+#             */
-/*   Updated: 2023/11/05 14:33:09 by ael-mejh         ###   ########.fr       */
+/*   Updated: 2023/11/07 20:48:49 by ael-mejh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,4 +40,7 @@ void	*ft_memchr(const void *s, int c, size_t n);
 size_t	ft_strlen(const char *str);
 size_t	ft_strlcat(char *dst, const char *src, size_t ft_dstsize);
 size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize);
+char *ft_strjoin(char const *s1, char const *s2);
+char *ft_substr(char const *s, unsigned int start, size_t len);
+char *ft_itoa(int n);
 #endif
