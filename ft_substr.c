@@ -3,15 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_substr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ael-mejh <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: ael-mejh <ael-mejh@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/07 14:00:30 by ael-mejh          #+#    #+#             */
-/*   Updated: 2023/11/07 15:41:21 by ael-mejh         ###   ########.fr       */
+/*   Updated: 2023/11/09 20:41:14 by ael-mejh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <string.h>
 
 char *ft_substr(char const *s, unsigned int start, size_t len)
 {
@@ -40,6 +39,8 @@ char *ft_substr(char const *s, unsigned int start, size_t len)
 /*
 int main()
 {
-	char s[] = "Bonjour comment ca va?";
-	printf("%s\n", ft_substr(s,5,8));
+	char const  s[] = "Bonjour comment ca va?";
+	unsigned int i = 5;
+	size_t p = 8;
+	printf("%s\n", ft_substr(s,i,p));
 }*/

@@ -1,43 +1,42 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putnbr_fd.c                                     :+:      :+:    :+:   */
+/*   ft_striteri.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ael-mejh <ael-mejh@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/11/08 15:34:42 by ael-mejh          #+#    #+#             */
-/*   Updated: 2023/11/09 13:14:10 by ael-mejh         ###   ########.fr       */
+/*   Created: 2023/11/09 20:35:20 by ael-mejh          #+#    #+#             */
+/*   Updated: 2023/11/09 20:59:51 by ael-mejh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void ft_putnbr_fd(int n, int fd)
+void ft_striteri(char *s, void (*f)(unsigned int, char*))
 {
-    unsigned int nbr;
+    unsigned int i;
 
-    nbr = n;
-    if (fd > 0)
-    { 
-        if (n < 0)
-        {
-            ft_putchar_fd('-',fd);
-            nbr = n * (-1);
-        }
-        if (nbr > 9)
-        {
-            ft_putnbr_fd(nbr / 10,fd);
-            ft_putnbr_fd(nbr % 10,fd);
-        }
-        if (nbr >= 0 && nbr <= 9)
-        {
-            nbr += 48;
-            ft_putchar_fd(nbr,fd);
-        }
+    i = 0;
+    while (s[i] != '\0')
+    {
+        f(i,&s[i]);
+        i++;
     }
-}/*
+}
+void *f(unsigned int i, char *g)
+{
+    while(g[i])
+    {
+        if(g[i] >= 97 && g[i] <= 122)
+        {
+            g[i] = g[i] - 32;
+        }
+        write(1,&g[i],1);
+       i++;
+    }
+}
 int main()
 {
-    int  i = -1025123;
-    ft_putnbr_fd(i,1);
-}*/
+    char *s ="hello" ;
+    ft_striteri(s,&f);
+}
