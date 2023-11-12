@@ -6,7 +6,7 @@
 /*   By: ael-mejh <ael-mejh@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/08 14:43:11 by ael-mejh          #+#    #+#             */
-/*   Updated: 2023/11/08 15:28:17 by ael-mejh         ###   ########.fr       */
+/*   Updated: 2023/11/12 10:57:57 by ael-mejh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,5 +19,5 @@ void ft_putendl_fd(char *s, int fd)
     {
         ft_putstr_fd(s,fd);
         write(fd,"\n",1);
-    }
+    } 
 }           
