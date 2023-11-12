@@ -6,17 +6,17 @@
 /*   By: ael-mejh <ael-mejh@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/10 15:27:17 by ael-mejh          #+#    #+#             */
-/*   Updated: 2023/11/12 00:07:50 by ael-mejh         ###   ########.fr       */
+/*   Updated: 2023/11/12 18:03:01 by ael-mejh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-
-static int count_w(const char *str, char ca)
+// count words  
+static	int	count_w(const char *str, char ca)
 {
+	int	pos;
+	int	count;
 
-	int pos;
-	int count;
 	pos = 1;
 	count = 0;
 	while (*str)
@@ -30,62 +30,84 @@ static int count_w(const char *str, char ca)
 			pos = 1;
 		str++;
 	}
-	return count;
+	return (count);
 }
-// static int count_size_wo(char *strc, char ce )
-// {
-	
-// }
-char **ft_split(char const *s, char c)
+// free allocation
+static char **freeallocation(char **mall1,char *mall2, int i)
 {
-	int cw;
-	int i;
-	char **ml;
-	i = 0;
-	int j;
-	int k;
-	int u;
-	k =0;
-	if (!s)
-		return NULL;
-	cw = count_w(s, c);
-
-	ml = (char **)malloc(sizeof(char *) * cw + 1);
-	
-	if (!ml)
+		while(mall2[i] && i >= 0)
+		{
+			free (mall1[i]);
+			i--;
+		}
+		free (&mall1);
 		return 0;
-	while (s[i])
+	
+}
+// print words
+static	char	**printword(char const *str, char ce, char **mall)
+{
+	int	i;
+	int	j;
+	int	k;
+	int	u;
+	
+	k = 0;
+	i = 0;
+	while (str[i])
 	{
-		while (s[i] == c && s[i])
+		while (str[i] == ce && str[i])
 			i++;
-		if (s[i])
+		if (str[i])
 		{
 			j = i;
-			while(s[j] && s[j] != c)
+			while (str[j] && str[j] != ce)
 				j++;
-			ml[k]= malloc((j - i) + 1);
-			// if (!ml[k])
-				//TODO FREE ALLOCATE  ML[K] AND ML HOWA LAKHER 
+			mall[k] = malloc((j - i) + 1);
+			if (!mall[k])
+				return (freeallocation(mall,mall[k],j - i + 1));
 			u = 0;
-			while (s[i] && s[i] != c)
-				ml[k][u++] = s[i++];
-			ml[k++][u] = '\0';
+			while (str[i] && str[i] != ce)
+				mall[k][u++] = str[i++];
+			mall[k++][u] = '\0';
 		}
-		
 	}
-	ml[k] = NULL;
- 	return ml;
+	mall[k] = NULL;
+	return (mall);
 }
 
-// int main()
-// {
-// 	char *cc = " ABCD HHH JJJ  O   KOO";
-// 	char c = ' ';
-// 	char **str = ft_split(cc,c);
-// 	int i =0;
-// 	while (str[i])
-// 	{
-// 		printf("%s\n",str[i++]);
+char	**ft_split(char const *s, char c)
+{
+	int		cw;
+	char	**ml;
+	char	**ll;
 
-// 	}
-// }
+	if (*s == '\0' || c == '\0')
+		return (0);
+	cw = count_w(s, c);
+	if (cw == 0)
+		return 0;
+	ml = (char **)malloc(sizeof(char *) * cw + 1);
+	if (cw == 0)
+	{
+		ml[0] = "\0";
+		return ml;
+	}
+	if (!ml)
+		return (0);
+	ll = printword(s, c, ml);
+	
+	return (ll);
+}
+
+int main()
+{
+	char *cc = "lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus. Suspendisse";
+	char c = ' ';
+	char **str = ft_split(cc,c);
+	int i =0;
+	while (str[i])
+	{
+		printf("%s\n",str[i++]);
+	}
+}
