@@ -6,7 +6,7 @@
 /*   By: ael-mejh <ael-mejh@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/10 15:27:17 by ael-mejh          #+#    #+#             */
-/*   Updated: 2023/11/12 21:51:43 by ael-mejh         ###   ########.fr       */
+/*   Updated: 2023/11/13 12:39:52 by ael-mejh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -82,19 +82,14 @@ char	**ft_split(char const *s, char c)
 	char	**ml;
 	char	**ll;
 
-	if (*s == '\0' || c == '\0')
-		return (0);
 	cw = count_w(s, c);
-	if (cw == 0)
-		return 0;
+	
 	ml = (char **)malloc(sizeof(char *) * (cw + 1));
-	if (cw == 0)
-	{
-		ml[0] = "\0";
-		return ml;
-	}
 	if (!ml)
-		return (0);
+	{
+		free(ml);
+		return (ml);
+	}
 	ll = printword(s, c, ml);
 	
 	return (ll);
@@ -102,8 +97,8 @@ char	**ft_split(char const *s, char c)
 
 // int main()
 // {
-//     const char *inputString = "Hello,World,Split,Me";
-//     char delimiter = ',';
+//     const char *inputString = "          ";
+//     char delimiter = ' ';
 
 //     char **result = ft_split(inputString, delimiter);
 //     // Print the split words
