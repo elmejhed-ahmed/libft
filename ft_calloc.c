@@ -20,7 +20,7 @@ void	*ft_calloc(size_t count, size_t size)
 	if (!d)
 		return (0);
 	else
-		ft_bzero(d,count * size);
+		ft_bzero(d, count * size);
 	return (d);
 }
 /*

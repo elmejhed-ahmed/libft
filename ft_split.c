@@ -11,7 +11,7 @@
 /* ************************************************************************** */
 
 #include "libft.h"
-// count words  
+
 static	int	count_w(const char *str, char ca)
 {
 	int	pos;
@@ -32,26 +32,25 @@ static	int	count_w(const char *str, char ca)
 	}
 	return (count);
 }
-// free allocation
-static char **freeallocation(char **mall1,char *mall2, int i)
+
+static char	**freeallocation(char **mall1, char *mall2, int i)
 {
-		while(mall2[i] && i >= 0)
-		{
-			free (mall1[i]);
-			i--;
-		}
-		free (mall1);
-		return 0;
-	
+	while (mall2[i] && i >= 0)
+	{
+		free(mall1[i]);
+		i--;
+	}
+	free(mall1);
+	return (0);
 }
-// print words
+
 static	char	**printword(char const *str, char ce, char **mall)
 {
 	int	i;
 	int	j;
 	int	k;
 	int	u;
-	
+
 	k = 0;
 	i = 0;
 	while (str[i])
@@ -65,7 +64,7 @@ static	char	**printword(char const *str, char ce, char **mall)
 				j++;
 			mall[k] = malloc((j - i) + 1);
 			if (!mall[k])
-				return (freeallocation(mall,mall[k],j - i + 1));
+				return (freeallocation(mall, mall[k], j - i + 1));
 			u = 0;
 			while (str[i] && str[i] != ce)
 				mall[k][u++] = str[i++];
@@ -83,7 +82,6 @@ char	**ft_split(char const *s, char c)
 	char	**ll;
 
 	cw = count_w(s, c);
-	
 	ml = (char **)malloc(sizeof(char *) * (cw + 1));
 	if (!ml)
 	{
@@ -91,7 +89,6 @@ char	**ft_split(char const *s, char c)
 		return (ml);
 	}
 	ll = printword(s, c, ml);
-	
 	return (ll);
 }
 
