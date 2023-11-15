@@ -6,7 +6,7 @@
 /*   By: ael-mejh <ael-mejh@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/09 20:35:20 by ael-mejh          #+#    #+#             */
-/*   Updated: 2023/11/15 17:43:18 by ael-mejh         ###   ########.fr       */
+/*   Updated: 2023/11/15 18:21:15 by ael-mejh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,8 +17,8 @@ void	ft_striteri(char *s, void (*f)(unsigned int, char*))
 	unsigned int	i;
 
 	i = 0;
-    if (!s)
-        return ;
+	if (!s)
+		return ;
 	while (s[i] != '\0')
 	{
 		f(i, &s[i]);

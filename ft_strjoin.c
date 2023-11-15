@@ -6,7 +6,7 @@
 /*   By: ael-mejh <ael-mejh@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/07 10:58:25 by ael-mejh          #+#    #+#             */
-/*   Updated: 2023/11/15 17:17:50 by ael-mejh         ###   ########.fr       */
+/*   Updated: 2023/11/15 18:22:18 by ael-mejh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,11 +15,11 @@
 char	*ft_strjoin(char const *s1, char const *s2)
 {
 	size_t		i;
-	char	*ml;
+	char		*ml;
 
 	i = 0;
 	if (!s1 || !s2)
-		return 0;
+		return (0);
 	ml = (char *)malloc(sizeof(char) * (ft_strlen(s1) + ft_strlen(s2) + 1));
 	if (!ml)
 		return (0);

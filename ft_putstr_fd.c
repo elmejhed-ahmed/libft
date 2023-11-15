@@ -6,7 +6,7 @@
 /*   By: ael-mejh <ael-mejh@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/08 14:34:24 by ael-mejh          #+#    #+#             */
-/*   Updated: 2023/11/15 17:27:52 by ael-mejh         ###   ########.fr       */
+/*   Updated: 2023/11/15 18:19:06 by ael-mejh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ void	ft_putstr_fd(char *s, int fd)
 	int	i;
 
 	i = 0;
-	if(!s || fd < 0)
+	if (!s || fd < 0)
 		return ;
 	while (s[i] != '\0')
 	{

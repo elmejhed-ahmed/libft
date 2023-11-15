@@ -6,7 +6,7 @@
 /*   By: ael-mejh <ael-mejh@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/07 14:00:30 by ael-mejh          #+#    #+#             */
-/*   Updated: 2023/11/15 18:07:16 by ael-mejh         ###   ########.fr       */
+/*   Updated: 2023/11/15 18:29:43 by ael-mejh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,10 +19,10 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 
 	i = 0;
 	if (!s)
-		return 0;
+		return (0);
 	if (start >= ft_strlen(s) || len == 0)
 	{
-		ml = ft_calloc(sizeof(char),1);
+		ml = ft_calloc(sizeof(char), 1);
 		return (ml);
 	}
 	if (len > ft_strlen(s + start))
