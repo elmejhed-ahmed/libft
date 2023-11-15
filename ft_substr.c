@@ -6,7 +6,7 @@
 /*   By: ael-mejh <ael-mejh@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/07 14:00:30 by ael-mejh          #+#    #+#             */
-/*   Updated: 2023/11/14 13:46:20 by ael-mejh         ###   ########.fr       */
+/*   Updated: 2023/11/15 18:07:16 by ael-mejh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,19 +18,18 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	size_t	i;
 
 	i = 0;
-	if (start >= ft_strlen(s) || len == 0 || !s)
+	if (!s)
+		return 0;
+	if (start >= ft_strlen(s) || len == 0)
 	{
-		ml = malloc(sizeof(char));
-		if (!ml)
-			return (0);
-		ml[0] = '\0';
+		ml = ft_calloc(sizeof(char),1);
 		return (ml);
 	}
 	if (len > ft_strlen(s + start))
 		len = ft_strlen(s + start);
 	ml = (char *)malloc(sizeof(char) * len + 1);
 	if (!ml)
-		return (0);
+		return (ml);
 	while (s[start] != '\0' && i < len)
 	{
 		ml[i] = s[start];

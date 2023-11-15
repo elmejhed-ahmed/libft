@@ -6,13 +6,13 @@
 #    By: ael-mejh <ael-mejh@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/10/31 12:37:23 by ael-mejh          #+#    #+#              #
-#    Updated: 2023/11/12 00:09:47 by ael-mejh         ###   ########.fr        #
+#    Updated: 2023/11/15 15:01:09 by ael-mejh         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = libft.a
 CC = gcc
-CFLAGS = -Wall -Wextra -Werror
+CFLAGS = -Wall -Wextra -Werror 
 
 SRC = ft_isalpha.c \
 		ft_isprint.c \

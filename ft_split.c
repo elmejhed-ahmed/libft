@@ -6,7 +6,7 @@
 /*   By: ael-mejh <ael-mejh@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/10 15:27:17 by ael-mejh          #+#    #+#             */
-/*   Updated: 2023/11/15 01:52:58 by ael-mejh         ###   ########.fr       */
+/*   Updated: 2023/11/15 18:01:55 by ael-mejh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,9 +33,9 @@ static	int	count_w(const char *str, char ca)
 	return (count);
 }
 
-static char	**freeallocation(char **mall1, char *mall2, int i)
+static char	**freeallocation(char **mall1, int i)
 {
-	while (mall2[i] && i >= 0)
+	while (mall1[i] && i >= 0)
 	{
 		free(mall1[i]);
 		i--;
@@ -75,21 +75,22 @@ char	**ft_split(char const *s, char c)
 	int		cw;
 	char	**ml;
 	char	**ll;
-
+	
+	if(!s)
+		return 0;
 	cw = count_w(s, c);
 	ml = (char **)malloc(sizeof(char *) * (cw + 1));
-	if (cw == 0)
+	if (cw == 0 )
 	{
 		ml[0] = NULL;
 		return (ml);
 	}
 	if (!ml)
 	{
-		free(ml);
-		return (ml);
+		return NULL;
 	}
 	ll = printword(s, c, ml);
 	if (!ll)
-		freeallocation(ml, NULL, cw);
+		freeallocation(ml, cw);
 	return (ll);
 }

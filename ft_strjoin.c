@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strjoin.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ael-mejh <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: ael-mejh <ael-mejh@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/07 10:58:25 by ael-mejh          #+#    #+#             */
-/*   Updated: 2023/11/07 13:58:49 by ael-mejh         ###   ########.fr       */
+/*   Updated: 2023/11/15 17:17:50 by ael-mejh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,29 +14,27 @@
 
 char	*ft_strjoin(char const *s1, char const *s2)
 {
-	int		lens1;
-	int		lens2;
-	int		i;
+	size_t		i;
 	char	*ml;
 
 	i = 0;
-	lens1 = ft_strlen(s1);
-	lens2 = ft_strlen(s2);
-	ml = (char *)malloc(sizeof(char) * (lens1 + lens2 + 1));
+	if (!s1 || !s2)
+		return 0;
+	ml = (char *)malloc(sizeof(char) * (ft_strlen(s1) + ft_strlen(s2) + 1));
 	if (!ml)
 		return (0);
-	while (s1[i] != '\0' && i < lens1)
+	while (s1[i] != '\0' && i < ft_strlen(s1))
 	{
 		ml[i] = s1[i];
 		i++;
 	}
 	i = 0;
-	while (s2[i] != '\0' && i < lens2)
+	while (s2[i] != '\0' && i < ft_strlen(s2))
 	{
-		ml[i + lens1] = s2[i];
+		ml[i + ft_strlen(s1)] = s2[i];
 		i++;
 	}
-	ml[lens1 + i] = '\0';
+	ml[ft_strlen(s1) + i] = '\0';
 	return (ml);
 }
 /*

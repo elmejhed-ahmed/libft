@@ -6,7 +6,7 @@
 /*   By: ael-mejh <ael-mejh@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/07 20:54:17 by ael-mejh          #+#    #+#             */
-/*   Updated: 2023/11/09 21:09:22 by ael-mejh         ###   ########.fr       */
+/*   Updated: 2023/11/15 16:50:30 by ael-mejh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,9 @@ char	*ft_strtrim(char const *s1, char const *set)
 	int		l;
 	int		k;
 	char	*ml;
-
+	
+	if (!s1 || !set)
+		return 0;
 	i = 0;
 	l = 0;
 	j = ft_strlen(s1) - 1;
@@ -32,11 +34,7 @@ char	*ft_strtrim(char const *s1, char const *set)
 	if (!ml)
 		return (0);
 	while (l < k)
-	{
-		ml[l] = s1[i];
-		i++;
-		l++;
-	}
+		ml[l++] = s1[i++];
 	ml[l] = '\0';
 	return (ml);
 }
