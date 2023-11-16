@@ -6,7 +6,7 @@
 /*   By: ael-mejh <ael-mejh@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/05 13:43:00 by ael-mejh          #+#    #+#             */
-/*   Updated: 2023/11/15 15:33:23 by ael-mejh         ###   ########.fr       */
+/*   Updated: 2023/11/16 11:20:05 by ael-mejh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,8 @@ char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 	size_t		nlen;
 
 	nlen = ft_strlen(needle);
+	if (len == 0 && !needle && !haystack)
+		return (0);
 	if (*needle == '\0' || len == 0)
 		return ((char *)haystack);
 	while (*haystack != '\0' && nlen <= len)
