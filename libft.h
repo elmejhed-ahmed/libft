@@ -6,7 +6,7 @@
 /*   By: ael-mejh <ael-mejh@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/30 14:38:05 by ael-mejh          #+#    #+#             */
-/*   Updated: 2023/11/16 16:58:05 by ael-mejh         ###   ########.fr       */
+/*   Updated: 2023/11/17 13:39:23 by ael-mejh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -57,6 +57,7 @@ typedef struct s_list
     void *content;
     struct s_list *next;
 } t_list;
-t_list *ft_lstnew(void *content);
+t_list  *ft_lstnew(void *content);
+void    ft_lstadd_front(t_list **lst, t_list *new);
 
 #endif
