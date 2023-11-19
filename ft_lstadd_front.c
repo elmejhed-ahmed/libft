@@ -6,7 +6,7 @@
 /*   By: ael-mejh <ael-mejh@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/17 13:37:14 by ael-mejh          #+#    #+#             */
-/*   Updated: 2023/11/19 18:57:53 by ael-mejh         ###   ########.fr       */
+/*   Updated: 2023/11/19 20:07:05 by ael-mejh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,56 +24,36 @@ void ft_lstadd_front(t_list **lst, t_list *new)
         *lst = new;
     }
 }
-int main()
-{
-    t_list *node;
+// int main()
+// {
+//     t_list *node;
     
-    t_list *n1 = ft_lstnew("hello");
-    t_list *n2 = ft_lstnew("he");
-    t_list *n3 = ft_lstnew("ff");
+//     t_list *n1 = ft_lstnew("hello");
+//     t_list *n2 = ft_lstnew("he");
+//     t_list *n3 = ft_lstnew("ff");
     
-    node =n1;
+//     node = n1;
+
+//     n1->next = n2;
+//     ft_lstadd_front(&node,n3);
+//     while(node != NULL)
+//     {
+//         printf("%s\n",node->content);
+//         node = node->next;
+//     }
+//     //---------------------------------------
+//     t_list *node;
+//     t_list *n1 = ft_lstnew("howa");
+//     t_list *n2 = ft_lstnew("ana");
+//     t_list *n3 = ft_lstnew("ahmed");
+//     node = n1;
+//     n1-> next = n2;
     
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+//     ft_lstadd_front(&node,n3);
     
-    // t_list *node;
-    // t_list *n1 = ft_lstnew("howa");
-    // t_list *n2 = ft_lstnew("ana");
-    // t_list *n3 = ft_lstnew("ahmed");
-    // node = n1;
-    // n1-> next = n2;
-    
-    // ft_lstadd_front(&node,n3);
-    
-    // while(node != NULL)
-    // {
-    //     printf("%s\n",node->content);
-    //     node= node->next;
-    // }
-}   
+//     while(node != NULL)
+//     {
+//         printf("%s\n",node->content);
+//         node= node->next;
+//     }
+// }   
