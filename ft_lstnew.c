@@ -6,7 +6,7 @@
 /*   By: ael-mejh <ael-mejh@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/16 17:02:38 by ael-mejh          #+#    #+#             */
-/*   Updated: 2023/11/17 13:33:42 by ael-mejh         ###   ########.fr       */
+/*   Updated: 2023/11/19 17:11:55 by ael-mejh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,41 +14,31 @@
 
 t_list *ft_lstnew(void *content)
 {
-    t_list *node; 
-    
-    node = malloc(sizeof(t_list));
-    if(!node)
-        return 0;
+    t_list *node;
+    node = (t_list *)malloc(sizeof(t_list));
+    if (!node)
+        return NULL;
     node->content = content;
-    node->next = NULL;
+    node->next    = NULL;
     return node;
 }
 // int main()
 // {
-//     t_list ll;
-//     int tab[3] = {1,2,3};
-//     int tab1[3]= {4,5,6};
-//     int tab2[3]= {7,8,9};
-//     int i = 0;
-//     while(i < 3)
+//     t_list *head;
+    
+//     t_list *n1 = ft_lstnew("hi");    
+//     t_list *n2 = ft_lstnew("ko");    
+//     t_list *n3 = ft_lstnew("mmm");    
+//     t_list *n4 = ft_lstnew("poui");
+//     head = n1;
+//     n1->next=n2;
+//     n2->next=n3;
+//     n3->next=n4;
+//     n4->next= NULL;
+//     while (head != NULL)
 //     {
-//         printf("%d ", tab[i]);
-//         i++;
+//         printf("%s\n",head->content);
+//         head = head->next;
 //     }
-//     printf("\n");
-//     i = 0;
-//     while(i < 3)
-//     {
-//         printf("%d ", tab1[i]);
-//         i++;
-//     }
-//     printf("\n");
-//     i = 0;
-//     while(i < 3)
-//     {
-//         printf("%d ", tab2[i]);
-//         i++;
-//     }
-//     //t_list *t = ft_lstnew(s);
-//    // printf("%s",t->content);
+    
 // }

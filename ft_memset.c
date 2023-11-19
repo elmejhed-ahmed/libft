@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memset.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ael-mejh <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: ael-mejh <ael-mejh@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/01 10:36:58 by ael-mejh          #+#    #+#             */
-/*   Updated: 2023/11/03 13:33:38 by ael-mejh         ###   ########.fr       */
+/*   Updated: 2023/11/19 15:28:15 by ael-mejh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,13 +26,3 @@ void	*ft_memset(void *b, int c, size_t len)
 	}
 	return (b);
 }
-/*
-int main()
-{
-	int b = -254;
-	int c = 1337;
-	//int d = sizeof(c); 
-	printf("%d",ft_memset(b,c,5));
-	
-}
-*/
