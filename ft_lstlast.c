@@ -6,7 +6,7 @@
 /*   By: ael-mejh <ael-mejh@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/20 09:33:11 by ael-mejh          #+#    #+#             */
-/*   Updated: 2023/11/20 10:46:41 by ael-mejh         ###   ########.fr       */
+/*   Updated: 2023/11/20 10:49:24 by ael-mejh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,6 @@ t_list *ft_lstlast(t_list *lst)
         node = node->next;
     }
     return node;
-    
 }
 // int main()
 // {
