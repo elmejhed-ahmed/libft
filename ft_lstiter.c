@@ -6,7 +6,7 @@
 /*   By: ael-mejh <ael-mejh@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/21 14:06:59 by ael-mejh          #+#    #+#             */
-/*   Updated: 2023/11/21 14:30:39 by ael-mejh         ###   ########.fr       */
+/*   Updated: 2023/11/21 14:38:44 by ael-mejh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,10 @@ void *f(void *lss)
     int i;
     i = 0;
     while(lss[i])
+    {
+        lss[i] = lss[i]-32;
+        w
+    }
 }
 void ft_lstiter(t_list *lst, void (*f)(void *))
 {
