@@ -6,7 +6,7 @@
 #    By: ael-mejh <ael-mejh@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/10/31 12:37:23 by ael-mejh          #+#    #+#              #
-#    Updated: 2023/11/19 16:30:54 by ael-mejh         ###   ########.fr        #
+#    Updated: 2023/11/21 11:15:54 by ael-mejh         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -20,10 +20,13 @@ SRC = ft_isalpha.c ft_isprint.c ft_memset.c ft_strlcpy.c ft_strrchr.c \
 		ft_toupper.c ft_strncmp.c ft_atoi.c ft_calloc.c ft_strdup.c \
 		ft_memchr.c ft_memcmp.c ft_strnstr.c ft_strjoin.c ft_substr.c \
 		ft_strtrim.c ft_itoa.c ft_putchar_fd.c ft_putstr_fd.c ft_putendl_fd.c \
-		ft_putnbr_fd.c ft_strmapi.c ft_striteri.c ft_split.c \
-BSRC=  *ft_lstnew ft_lstadd_front \
-		
+		ft_putnbr_fd.c ft_strmapi.c ft_striteri.c ft_split.c
+
+BSRC =  ft_lstnew.c ft_lstadd_front.c ft_lstsize.c ft_lstlast.c \
+		ft_lstadd_back.c  \		
+
 OBJ = $(SRC:.c=.o)
+
 BOBJ = $(BSRC:.c=.o)
 
 all: $(NAME)
@@ -31,10 +34,10 @@ all: $(NAME)
 $(NAME): $(OBJ)
 	ar rcs $@ $^
 	
-$(NAME): $(BOBJ)
-	ar rcs $@ $^
+bonus: $(BOBJ)
+	ar rcs $(NAME) $^
 	
-%.o: %.c
+%.o: %.c libft.h
 	$(CC) $(CFLAGS) -c $< -o $@
 
 clean:
