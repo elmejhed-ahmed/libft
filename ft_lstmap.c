@@ -6,7 +6,7 @@
 /*   By: ael-mejh <ael-mejh@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/21 16:42:12 by ael-mejh          #+#    #+#             */
-/*   Updated: 2023/11/21 17:36:59 by ael-mejh         ###   ########.fr       */
+/*   Updated: 2023/11/22 11:17:02 by ael-mejh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,12 +28,8 @@ t_list *ft_lstmap(t_list *lst, void *(*f)(void *),void (*del)(void *))
             ft_lstclear(&head,del);
             return (0);
         }
-        ft_lstadd_back(&head,new);
+        ft_lstadd_back(&head,nw);
         lst = lst->next;
     }
     return head;
-}
-int main()
-{
-    
 }
