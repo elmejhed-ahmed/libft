@@ -6,7 +6,7 @@
 /*   By: ael-mejh <ael-mejh@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/10 15:27:17 by ael-mejh          #+#    #+#             */
-/*   Updated: 2023/11/22 17:33:23 by ael-mejh         ###   ########.fr       */
+/*   Updated: 2023/11/22 18:04:46 by ael-mejh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,16 +35,16 @@ static	int	count_w(const char *str, char ca)
 
 static char	**freeallocation(char **mall1, int k)
 {
-	int i;
-	
+	int	i;
+
 	i = 0;
 	while (i < k)
-    {
-        free(mall1[i]);
-        i++;
-    }
-    free(mall1);
-    return (NULL);
+	{
+		free(mall1[i]);
+		i++;
+	}
+	free(mall1);
+	return (NULL);
 }
 
 static	char	**printword(char const *str, char ce, char **mall)
@@ -65,17 +65,12 @@ static	char	**printword(char const *str, char ce, char **mall)
 			while (str[j] && str[j] != ce)
 				j++;
 			mall[k] = (char *)malloc((j - i) + 1);
-			 if (mall[k] == NULL)
-       	 	{
-            mall = freeallocation(mall, k);
-            return mall; 
-        	}
-			ft_memcpy(mall[k],&str[i], j - i);
-			mall[k][j - i] = '\0';
-			k++;
+			if (mall[k] == NULL)
+				return (freeallocation(mall, k)); 
+			ft_memcpy (mall[k], &str[i], j - i);
+			mall[k++][j - i] = '\0';
 			i = j;
 		}
-		j++;
 	}
 	mall[k] = NULL;
 	return (mall);
@@ -91,19 +86,14 @@ char	**ft_split(char const *s, char c)
 		return (0);
 	cw = count_w(s, c);
 	ml = (char **)malloc(sizeof(char *) * (cw + 1));
+	if (!ml)
+		return (NULL);
 	if (cw == 0)
 	{
 		ml[0] = NULL;
 		return (ml);
 	}
-	if (!ml)
-	{
-		free(ml);
-		return (NULL);
-	}
 	ll = printword(s, c, ml);
-	if (!ll)
-		return freeallocation(ml,cw);
 	return (ll);
 }
 // int main()
