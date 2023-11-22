@@ -6,7 +6,7 @@
 /*   By: ael-mejh <ael-mejh@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/10 15:27:17 by ael-mejh          #+#    #+#             */
-/*   Updated: 2023/11/15 19:02:14 by ael-mejh         ###   ########.fr       */
+/*   Updated: 2023/11/22 17:33:23 by ael-mejh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,22 +33,18 @@ static	int	count_w(const char *str, char ca)
 	return (count);
 }
 
-static char	**freeallocation(char **mall1)
+static char	**freeallocation(char **mall1, int k)
 {
 	int i;
-
-	i =0;
-	if(mall1)
-	{
-		while (mall1[i] )
-		{
-			free(mall1[i]);
-			i++;
-		}
-		free(mall1);
-	}
 	
-	return (0);
+	i = 0;
+	while (i < k)
+    {
+        free(mall1[i]);
+        i++;
+    }
+    free(mall1);
+    return (NULL);
 }
 
 static	char	**printword(char const *str, char ce, char **mall)
@@ -68,11 +64,17 @@ static	char	**printword(char const *str, char ce, char **mall)
 			j = i;
 			while (str[j] && str[j] != ce)
 				j++;
-			mall[k++] = ft_substr(str, i, j - i);
-			if (!mall[k])
-				return freeallocation(mall);
+			mall[k] = (char *)malloc((j - i) + 1);
+			 if (mall[k] == NULL)
+       	 	{
+            mall = freeallocation(mall, k);
+            return mall; 
+        	}
+			ft_memcpy(mall[k],&str[i], j - i);
+			mall[k][j - i] = '\0';
+			k++;
+			i = j;
 		}
-		i = j;
 		j++;
 	}
 	mall[k] = NULL;
@@ -96,10 +98,22 @@ char	**ft_split(char const *s, char c)
 	}
 	if (!ml)
 	{
+		free(ml);
 		return (NULL);
 	}
 	ll = printword(s, c, ml);
 	if (!ll)
-		return freeallocation(ml);
+		return freeallocation(ml,cw);
 	return (ll);
 }
+// int main()
+// {
+// 	char *cc = "hello!";
+// 	char c = ' ';
+// 	char **str = ft_split(cc,c);
+// 	int i =0;
+// 	while (str[i])
+// 	{
+// 		printf("%s\n",str[i++]);
+// 	}
+// }
