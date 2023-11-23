@@ -6,7 +6,7 @@
 /*   By: ael-mejh <ael-mejh@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/20 10:50:26 by ael-mejh          #+#    #+#             */
-/*   Updated: 2023/11/22 20:47:20 by ael-mejh         ###   ########.fr       */
+/*   Updated: 2023/11/23 10:43:43 by ael-mejh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,6 +24,7 @@ void ft_lstadd_back(t_list **lst, t_list *new)
     last = ft_lstlast(*lst);
     last->next = new;
     new->next = NULL;
+    
 }
 
 
