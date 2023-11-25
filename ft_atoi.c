@@ -3,20 +3,33 @@
 /*                                                        :::      ::::::::   */
 /*   ft_atoi.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ael-mejh <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: ael-mejh <ael-mejh@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/04 13:42:04 by ael-mejh          #+#    #+#             */
-/*   Updated: 2023/11/04 14:14:36 by ael-mejh         ###   ########.fr       */
+/*   Updated: 2023/11/25 16:23:01 by ael-mejh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
+static int	chack_nbr(unsigned long long nbr, int si, int leni)
+{
+	if (leni >= 20 && si > 0)
+		return (-1);
+	if (leni >= 20 && si < 0)
+		return (0);
+	if (nbr > LONG_MAX && si > 0)
+		return (-1);
+	if (nbr > LONG_MAX && si < 0)
+		return (0);
+	return ((int)nbr * si);
+}
+
 int	ft_atoi(const char *str)
 {
-	int	i;
-	int	negat;
-	int	num;
+	int					i;
+	int					negat;
+	unsigned long long	num;
 
 	i = 0;
 	negat = 1;
@@ -34,5 +47,5 @@ int	ft_atoi(const char *str)
 		num = num * 10 + str[i] - 48;
 		i++;
 	}
-	return (negat * num);
+	return (chack_nbr(num, negat, i));
 }
