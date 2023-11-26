@@ -1,44 +1,44 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstmap_bonus.c                                  :+:      :+:    :+:   */
+/*   ft_putnbr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ael-mejh <ael-mejh@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/11/21 16:42:12 by ael-mejh          #+#    #+#             */
-/*   Updated: 2023/11/26 13:20:53 by ael-mejh         ###   ########.fr       */
+/*   Created: 2023/11/08 15:34:42 by ael-mejh          #+#    #+#             */
+/*   Updated: 2023/11/19 13:47:39 by ael-mejh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
+void	ft_putnbr_fd(int n, int fd)
 {
-	t_list	*head;
-	t_list	*nw;
+	unsigned int	nbr;
 
-	head = NULL;
-	if (!lst || !f)
-		return (NULL);
-	while (lst != NULL)
+	nbr = n;
+	if (fd > 0)
 	{
-		nw = ft_lstnew(lst->content);
-		if (!nw)
+		if (n < 0)
 		{
-			ft_lstclear(&head, del);
-			return (NULL);
+			ft_putchar_fd('-', fd);
+			nbr = n * (-1);
 		}
-		nw->content = f(lst->content);
-		if (!nw->content)
+		if (nbr > 9)
 		{
-			free(nw);
-			ft_lstclear(&head, del);
-			return (NULL);
+			ft_putnbr_fd(nbr / 10, fd);
+			ft_putnbr_fd(nbr % 10, fd);
 		}
-		ft_lstadd_back(&head, nw);
-		lst = lst->next;
+		if (nbr >= 0 && nbr <= 9)
+		{
+			nbr += 48;
+			ft_putchar_fd(nbr, fd);
+		}
 	}
-	return (head);
 }
+/*
 int main()
-{}
+{
+    int  i = -1025123;
+    ft_putnbr_fd(i,1);
+}*/
