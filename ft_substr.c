@@ -6,7 +6,7 @@
 /*   By: ael-mejh <ael-mejh@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/07 14:00:30 by ael-mejh          #+#    #+#             */
-/*   Updated: 2023/11/22 11:32:41 by ael-mejh         ###   ########.fr       */
+/*   Updated: 2023/11/30 16:32:02 by ael-mejh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,11 +39,3 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	ml[i] = '\0';
 	return (ml);
 }
-/*
-int main()
-{
-	char const  s[] = "Bonjour comment ca va?";
-	unsigned int i = 5;
-	size_t p = 8;
-	printf("%s\n", ft_substr(s,i,p));
-}*/

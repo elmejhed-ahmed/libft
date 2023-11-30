@@ -6,7 +6,7 @@
 /*   By: ael-mejh <ael-mejh@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/09 18:17:49 by ael-mejh          #+#    #+#             */
-/*   Updated: 2023/11/15 18:25:59 by ael-mejh         ###   ########.fr       */
+/*   Updated: 2023/11/30 16:31:52 by ael-mejh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,15 +31,3 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 	ml[i] = '\0';
 	return (ml);
 }
-/*char f(unsigned int i, char g)
-{
-    if (g >= 97 && g <= 122)
-       g = g - 32;
-    return g;
-}
-int main()
-{
-    char s[5] = {'h','g','k','p'};
-    char *gg = ft_strmapi(s,f);
-    printf("%s",gg);
-}*/

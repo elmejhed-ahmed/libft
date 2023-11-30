@@ -6,7 +6,7 @@
 /*   By: ael-mejh <ael-mejh@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/07 10:58:25 by ael-mejh          #+#    #+#             */
-/*   Updated: 2023/11/15 18:22:18 by ael-mejh         ###   ########.fr       */
+/*   Updated: 2023/11/30 16:31:45 by ael-mejh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,11 +37,3 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	ml[ft_strlen(s1) + i] = '\0';
 	return (ml);
 }
-/*
-int main()
-{
-	char *s1 = "admin ";
-	char *s2 = "21admin ll,,,";
-	char *src = ft_strjoin(s1,s2);
-	printf("%s\n",src);	
-}*/

@@ -6,7 +6,7 @@
 /*   By: ael-mejh <ael-mejh@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/10 15:27:17 by ael-mejh          #+#    #+#             */
-/*   Updated: 2023/11/22 18:04:46 by ael-mejh         ###   ########.fr       */
+/*   Updated: 2023/11/30 16:31:28 by ael-mejh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -96,14 +96,3 @@ char	**ft_split(char const *s, char c)
 	ll = printword(s, c, ml);
 	return (ll);
 }
-// int main()
-// {
-// 	char *cc = "hello!";
-// 	char c = ' ';
-// 	char **str = ft_split(cc,c);
-// 	int i =0;
-// 	while (str[i])
-// 	{
-// 		printf("%s\n",str[i++]);
-// 	}
-// }

@@ -6,7 +6,7 @@
 /*   By: ael-mejh <ael-mejh@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/09 20:35:20 by ael-mejh          #+#    #+#             */
-/*   Updated: 2023/11/15 18:21:15 by ael-mejh         ###   ########.fr       */
+/*   Updated: 2023/11/30 16:31:42 by ael-mejh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,18 +25,3 @@ void	ft_striteri(char *s, void (*f)(unsigned int, char*))
 		i++;
 	}
 }
-/*
-void f(unsigned int i, char *g)
-{
-        if(g[i] >= 97 && g[i] <= 122)
-        {
-            g[i] = g[i] - 32;
-        }
-        write(1,&g[i],1);
-}
-int main()
-{
-    //char s[] ="heefewfefeqwllo";
-    char s[6] ={'s','p','u','r','s'};
-    ft_striteri(s,&f);
-}*/

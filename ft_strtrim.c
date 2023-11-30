@@ -6,7 +6,7 @@
 /*   By: ael-mejh <ael-mejh@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/07 20:54:17 by ael-mejh          #+#    #+#             */
-/*   Updated: 2023/11/15 18:28:43 by ael-mejh         ###   ########.fr       */
+/*   Updated: 2023/11/30 16:31:58 by ael-mejh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,10 +38,3 @@ char	*ft_strtrim(char const *s1, char const *set)
 	ml[l] = '\0';
 	return (ml);
 }
-/*
-int main()
-{
-	char *s1 = "hfkjhfk";
-	char *set = "";
-	printf("%s", ft_strtrim(s1,set));
-}*/

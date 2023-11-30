@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memmove.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ael-mejh <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: ael-mejh <ael-mejh@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/01 23:10:42 by ael-mejh          #+#    #+#             */
-/*   Updated: 2023/11/05 13:40:12 by ael-mejh         ###   ########.fr       */
+/*   Updated: 2023/11/30 16:31:12 by ael-mejh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,23 +34,3 @@ void	*ft_memmove(void *dest, const void *src, size_t len)
 	}
 	return (dest);
 }
-/*
-int main()
-{
-	char src[] = "hello";
-	char dest[5];
-	//int k = sizeof(src);
-	char *p = ft_memmove(dest,src,3);
-	for (int i = 0;i < 5;i++)
-		printf("%c",p[i]);
-	return 0;
-}
-*//*
-int main ()
-{
-	char src2[] = "Hello, World!";
-	char dest2[20] = "";
-	ft_memmove(dest2 + 2, src2, 7);
-	printf("Expected:  HeHello, World!\n");
-	printf("Actual: %s\n", dest2);
-}*/

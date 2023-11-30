@@ -6,14 +6,13 @@
 /*   By: ael-mejh <ael-mejh@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/30 14:38:05 by ael-mejh          #+#    #+#             */
-/*   Updated: 2023/11/25 16:18:15 by ael-mejh         ###   ########.fr       */
+/*   Updated: 2023/11/30 16:32:11 by ael-mejh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
 # define LIBFT_H
 
-# include <stdio.h>
 # include <unistd.h>
 # include <stdlib.h>
 # include <limits.h>
