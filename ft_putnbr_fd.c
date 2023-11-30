@@ -6,7 +6,7 @@
 /*   By: ael-mejh <ael-mejh@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/08 15:34:42 by ael-mejh          #+#    #+#             */
-/*   Updated: 2023/11/30 16:31:20 by ael-mejh         ###   ########.fr       */
+/*   Updated: 2023/11/30 18:28:21 by ael-mejh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ void	ft_putnbr_fd(int n, int fd)
 	unsigned int	nbr;
 
 	nbr = n;
-	if (fd > 0)
+	if (fd >= 0)
 	{
 		if (n < 0)
 		{

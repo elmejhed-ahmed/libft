@@ -6,7 +6,7 @@
 #    By: ael-mejh <ael-mejh@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/10/31 12:37:23 by ael-mejh          #+#    #+#              #
-#    Updated: 2023/11/28 18:09:22 by ael-mejh         ###   ########.fr        #
+#    Updated: 2023/11/30 19:59:06 by ael-mejh         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -48,3 +48,5 @@ fclean: clean
 	rm -f $(NAME)
 	
 re: fclean all
+
+ .PHONY: clean
