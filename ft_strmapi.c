@@ -6,7 +6,7 @@
 /*   By: ael-mejh <ael-mejh@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/09 18:17:49 by ael-mejh          #+#    #+#             */
-/*   Updated: 2023/11/30 16:38:28 by ael-mejh         ###   ########.fr       */
+/*   Updated: 2023/12/01 12:07:02 by ael-mejh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 	char			*ml;
 
 	i = 0;
-	if (!s)
+	if (!s || !f)
 		return (0);
 	ml = (char *)malloc(sizeof(char) * ft_strlen(s) + 1);
 	if (!ml)

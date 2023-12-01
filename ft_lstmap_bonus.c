@@ -6,7 +6,7 @@
 /*   By: ael-mejh <ael-mejh@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/21 16:42:12 by ael-mejh          #+#    #+#             */
-/*   Updated: 2023/11/30 16:36:24 by ael-mejh         ###   ########.fr       */
+/*   Updated: 2023/12/01 18:19:02 by ael-mejh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 	t_list	*nw;
 
 	head = NULL;
-	if (!lst || !f)
+	if (!lst || !f || !del)
 		return (NULL);
 	while (lst != NULL)
 	{
