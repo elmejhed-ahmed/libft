@@ -6,7 +6,7 @@
 /*   By: ael-mejh <ael-mejh@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/01 14:15:46 by ael-mejh          #+#    #+#             */
-/*   Updated: 2023/12/01 17:24:15 by ael-mejh         ###   ########.fr       */
+/*   Updated: 2023/12/02 13:27:01 by ael-mejh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,14 +14,6 @@
 
 void	ft_bzero(void *str, size_t n)
 {
-	size_t	i;
-	char	*ptr;
-
-	i = 0;
-	ptr = (char *)str;
-	while (i < n)
-	{
-		ptr[i] = '\0';
-		i++;
-	}
+	if (n > 0)
+		ft_memset(str, 0, n);
 }
