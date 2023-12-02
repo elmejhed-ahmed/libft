@@ -42,7 +42,7 @@ bonus: $(BOBJ)
 	$(CC) $(CFLAGS) -c $< -o $@
 
 clean:
-	rm -rf *.o
+	rm -rf $(OBJ) $(BOBJ)
 	
 fclean: clean
 	rm -f $(NAME)
