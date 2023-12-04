@@ -6,7 +6,7 @@
 /*   By: ael-mejh <ael-mejh@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/04 12:04:17 by ael-mejh          #+#    #+#             */
-/*   Updated: 2023/12/01 18:22:27 by ael-mejh         ###   ########.fr       */
+/*   Updated: 2023/12/04 19:07:40 by ael-mejh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ void	*ft_memchr(const void *s, int c, size_t n)
 	while (i < n)
 	{
 		if (str[i] == (unsigned char)c)
-			return ((void *)&str[i]);
+			return (&str[i]);
 		i++;
 	}
 	return (0);

@@ -6,7 +6,7 @@
 /*   By: ael-mejh <ael-mejh@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/10 15:27:17 by ael-mejh          #+#    #+#             */
-/*   Updated: 2023/11/30 16:31:28 by ael-mejh         ###   ########.fr       */
+/*   Updated: 2023/12/04 19:06:37 by ael-mejh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -66,7 +66,7 @@ static	char	**printword(char const *str, char ce, char **mall)
 				j++;
 			mall[k] = (char *)malloc((j - i) + 1);
 			if (mall[k] == NULL)
-				return (freeallocation(mall, k)); 
+				return (freeallocation(mall, k));
 			ft_memcpy (mall[k], &str[i], j - i);
 			mall[k++][j - i] = '\0';
 			i = j;
