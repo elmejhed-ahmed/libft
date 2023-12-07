@@ -6,7 +6,7 @@
 #    By: ael-mejh <ael-mejh@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/10/31 12:37:23 by ael-mejh          #+#    #+#              #
-#    Updated: 2023/12/02 15:01:42 by ael-mejh         ###   ########.fr        #
+#    Updated: 2023/12/05 13:33:59 by ael-mejh         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -49,4 +49,4 @@ fclean: clean
 	
 re: fclean all
 
- .PHONY: clean
+.PHONY: clean
